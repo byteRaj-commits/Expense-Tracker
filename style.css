@@ -93,3 +93,37 @@ body{
     align-items: center;
     margin-bottom: 1rem;
 }
+
+.card-title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.card-menu{
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.amount{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.change{
+    font-size: 0.875rem;
+    color: rgb(89, 196, 89);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.link{
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}

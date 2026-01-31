@@ -127,3 +127,66 @@ body{
     opacity: 0.8;
     margin-bottom: 1rem;
 }
+
+.limit{
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.my-card{
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-chip{
+    width: 32px;
+    height: 24px;
+    background: #fbbf24;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.card-chip::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: #92400e;
+    border-radius: 2px;
+}
+
+.card-number{
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    font-family: 'Courier New',  monospace;
+}
+
+.card-logo{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: -8px;
+}
+
+.card-logo-circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;;
+}
+
+.logo-red{
+    background: #ef4444;
+
+}
+.logo-orange{
+    background: #f59e0b;
+    margin-left: -8px;
+}

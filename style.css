@@ -292,3 +292,46 @@ overflow: hidden;
     font-size: 0.75rem;
     color: #6b7280;
 }
+
+.expenses-breakdown{
+    margin-top: 1rem;
+}
+
+.total-expenses{
+    font-size: 1.7rem;
+    font-size: 700;
+    margin-bottom: 1rem;
+}
+
+.period-tabs{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.period-tab{
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.period-tab.active{
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.period-amounts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.period-values{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}

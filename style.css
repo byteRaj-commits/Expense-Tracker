@@ -382,3 +382,14 @@ overflow: hidden;
 .dot-investement{
     background: #10b981;
 }
+
+.transactions-section{
+    grid-column: 1 / -1;
+}
+
+.section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}

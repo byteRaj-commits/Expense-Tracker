@@ -252,7 +252,7 @@ overflow: hidden;
     border-radius: 4px;
 }
 
-.cgart-section{
+.chart-section{
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -272,7 +272,7 @@ overflow: hidden;
 }
 
 .chart-bar{
-    width: 40px;
+    width: 32px;
     background: #e5e7eb;
     border-radius: 4px 4px 0 0;
     position: relative;
@@ -334,4 +334,51 @@ overflow: hidden;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+
+.color-bar{
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #ea580c, #f59e0b, #eab308, #10b981);
+    margin-bottom: 1rem;
+}
+
+.expense-categories{
+    list-style-type: none;
+}
+
+.expense-category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.category-info{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot-food{
+    background: #ea580c;
+}
+
+.dot-entertainment{
+    background: #f59e0b;
+}
+
+.dot-shopping{
+    background: #eab308;
+}
+
+.dot-investement{
+    background: #10b981;
 }

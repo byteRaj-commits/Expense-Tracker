@@ -385,6 +385,7 @@ overflow: hidden;
 
 .transactions-section{
     grid-column: 1 / -1;
+    margin-top: 2rem;
 }
 
 .section-header{
@@ -423,4 +424,25 @@ overflow: hidden;
     font-weight: 600;
     color: #6b7280;
     border-bottom: 1px solid #e5e7eb;
+}
+
+.transactions-table td{
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.status-success{
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.action-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0.25rem;
 }

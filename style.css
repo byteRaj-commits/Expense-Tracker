@@ -247,7 +247,9 @@ overflow: hidden;
 }
 
 .chart-bar-expense{
-    height: 80px
+    height: 80px;
+    background: #ea580c;
+    border-radius: 4px;
 }
 
 .cgart-section{
@@ -281,4 +283,12 @@ overflow: hidden;
 
 .chart-bar.active{
     background: linear-gradient(to top, #ea580c, #fb923c);
+}
+
+.chart-label{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #6b7280;
 }

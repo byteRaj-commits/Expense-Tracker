@@ -493,7 +493,7 @@ overflow: hidden;
 .modal-content{
     background: white;
     border-radius: 12px;
-    width: 480px;
+    width: 450px;
     max-width: 90vw;
     position: absolute;
     top: 50%;

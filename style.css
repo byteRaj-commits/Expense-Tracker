@@ -581,3 +581,43 @@ overflow: hidden;
     background: #374151;
     color: white;
 }
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        transform: translate(-50%, 60%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px){
+    .dashboard-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chart-section{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .main-content{
+        padding: 1rem;
+    }
+}

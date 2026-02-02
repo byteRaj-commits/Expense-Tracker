@@ -508,3 +508,32 @@ overflow: hidden;
     justify-content: space-between;
     align-items: center;
 }
+
+.modal-title{
+    dominant-baseline: 1.25rem;
+    font-weight: 600;
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.modal-body{
+    padding: 1.5rem;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+}

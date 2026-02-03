@@ -3,6 +3,7 @@ let transaction = [
         id: 1,
         date: "2026-01-14",
         amount: -299.05,
+        category: "Subscription",
         status: "success",
         type: "expense",
     },
@@ -11,6 +12,7 @@ let transaction = [
         id: 2,
         date: "2026-01-8",
         amount: -583,
+        category: "Shopping",
         status: "success",
         type: "expense",
     },
@@ -19,6 +21,7 @@ let transaction = [
         id: 3,
         date: "2026-01-2",
         amount: -8500,
+        category: "Travelling",
         status: "success",
         type: "expense",
     },
@@ -62,18 +65,18 @@ window.onclick = function(event){
     if(event.target === incomeModal){
         closeModal('incomeModal')
     }
-    if(event.target === 'expenseModal'){
+    if(event.target === expenseModal){
         closeModal('expenseModal')
     }
 }
 
 function addIncome(){
     const amount = parseFloat(document.getElementById('incomeAmount').value)
-    const category = document.getAnimations('incomeCategory');
-    const description = document.getAnimations('incomeDescription');
-    const date = document.getAnimations('incomeDate').value;
+    const category = document.getElementById('incomeCategory').value;
+    const description = document.getElementById('incomeDescription').value;
+    const date = document.getElementById('incomeDate').value;
 
-    if(!amount || !category || !date){
+    if (isNaN(amount) || category === "" || description.trim() === "" || date === "") {
         alert('Please fill all the required data');
         return;
     }
@@ -85,7 +88,7 @@ function addIncome(){
         amount: amount,
         status: 'success',
         type: 'income',
-        desription: description,
+        description: description,
     }
 
     transaction.unshift(newTransaction);
@@ -101,11 +104,11 @@ function addIncome(){
 
 function addExpense(){
     const amount = parseFloat(document.getElementById('expenseAmount').value)
-    const category = document.getAnimations('expenseCategory');
-    const description = document.getAnimations('expenseDescription');
+    const category = document.getAnimations('expenseCategory').value;
+    const description = document.getAnimations('expenseDescription').value;
     const date = document.getAnimations('expenseDate').value;
 
-    if(!amount || !category || !date){
+    if (isNaN(amount) || category === "" || description.trim() === "" || date === "") {
         alert('Please fill all the required data');
         return;
     }
@@ -117,7 +120,7 @@ function addExpense(){
         amount: -amount,
         status: 'success',
         type: 'expense',
-        desription: description,
+        description: description,
     }
 
     transaction.unshift(newTransaction);
@@ -133,14 +136,14 @@ function addExpense(){
 
 function updateDashboard(){
     document.querySelector('.income-amount').textContent = `${monthlyIncome.toLocaleString()}.00`
-    document.querySelector('.expense-amount').textContent = `${monthlyExpense.toLocaleString()}.00`
+    document.querySelector('.expense-amount').textContent = `${monthlyExpenses.toLocaleString()}.00`
 
     let spendingLimit = 12345;
     const usedAmount = monthlyExpenses;
     const percentage = (usedAmount / spendingLimit) * 100;
 
     document.querySelector('.spending-limit').textContent = `${(spendingLimit - usedAmount).toLocaleString()}.00`
-    document.querySelector('.progess-fill').style.width = `${Math.min(percentage, 100)}%`
+    document.querySelector('.progress-fill').style.width = `${Math.min(percentage, 100)}%`
 
 }
 
@@ -155,7 +158,7 @@ function updateTransactionTable() {
         const formattedDate = new Date(transaction.date).toLocaleDateString(
             'en-us',
             {
-                months: 'short',
+                month: 'short',
                 day: 'numeric',
                 year: 'numeric',
             }
@@ -234,3 +237,8 @@ style.textContent = `
 `
 
 document.head.appendChild(style);
+
+document.addEventListener('DOMContentLoaded', function(){
+    updateTransactionTable();
+    updateDashboard();
+})

@@ -193,4 +193,44 @@ function showNotification(message, type = 'success'){
 
     notification.textContent = message;
     document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease'
+
+        setTimeout(() => {
+            document.body.removeChild(notification)
+        }, 300);
+
+    }, 3000);
 }
+
+const style = document.createElement('style');
+
+style.textContent = `
+    @keyframes slideInRight{
+        from{
+            transform: translate(100%);
+            opacity: 0;
+        }
+
+        to{
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutRight{
+        from{
+            transform: translate(0);
+            opacity: 1;
+        }
+
+        to{
+            transform: translate(100%);
+            opacity: 0;
+        }
+    }
+
+`
+
+document.head.appendChild(style);

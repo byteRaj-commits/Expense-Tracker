@@ -90,5 +90,43 @@ function addIncome(){
 
     transaction.unshift(newTransaction);
 
+    monthlyIncome += amount;
+    updateDashboard()
+    updateTransactionTable()
+
+    closeModal('incomeModal');
+    showNotification("Income added successfully", "success");
+
 }
 
+function addExpense(){
+    const amount = parseFloat(document.getElementById('expenseAmount').value)
+    const category = document.getAnimations('expenseCategory');
+    const description = document.getAnimations('expenseDescription');
+    const date = document.getAnimations('expenseDate').value;
+
+    if(!amount || !category || !date){
+        alert('Please fill all the required data');
+        return;
+    }
+
+    const newTransaction = {
+        id: transaction.length + 1,
+        date: date,
+        category: category.charAt(0).toUpperCase() + category.slice(1),
+        amount: -amount,
+        status: 'success',
+        type: 'expense',
+        desription: description,
+    }
+
+    transaction.unshift(newTransaction);
+
+    monthlyExpenses += amount;
+    updateDashboard()
+    updateTransactionTable()
+
+    closeModal('expenseModal');
+    showNotification("Expense added successfully", "success");
+
+}

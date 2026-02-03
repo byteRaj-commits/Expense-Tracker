@@ -104,9 +104,9 @@ function addIncome(){
 
 function addExpense(){
     const amount = parseFloat(document.getElementById('expenseAmount').value)
-    const category = document.getAnimations('expenseCategory').value;
-    const description = document.getAnimations('expenseDescription').value;
-    const date = document.getAnimations('expenseDate').value;
+    const category = document.getElementById('expenseCategory').value;
+    const description = document.getElementById('expenseDescription').value;
+    const date = document.getElementById('expenseDate').value;
 
     if (isNaN(amount) || category === "" || description.trim() === "" || date === "") {
         alert('Please fill all the required data');

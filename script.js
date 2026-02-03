@@ -66,3 +66,29 @@ window.onclick = function(event){
         closeModal('expenseModal')
     }
 }
+
+function addIncome(){
+    const amount = parseFloat(document.getElementById('incomeAmount').value)
+    const category = document.getAnimations('incomeCategory');
+    const description = document.getAnimations('incomeDescription');
+    const date = document.getAnimations('incomeDate').value;
+
+    if(!amount || !category || !date){
+        alert('Please fill all the required data');
+        return;
+    }
+
+    const newTransaction = {
+        id: transaction.length + 1,
+        date: date,
+        category: category.charAt(0).toUpperCase() + category.slice(1),
+        amount: amount,
+        status: 'success',
+        type: 'income',
+        desription: description,
+    }
+
+    transaction.unshift(newTransaction);
+
+}
+

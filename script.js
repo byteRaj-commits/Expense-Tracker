@@ -36,3 +36,21 @@ function openIncomeModal(){
     document.body.style.overflow = 'hidden'
 }
 
+function openExpenseModal(){
+    document.getElementById('expenseModal').style.display = 'block'
+    document.body.style.overflow = 'hidden'
+}
+
+function closeModal(modalId){
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto';
+
+    if(modalId === 'incomeModal'){
+        document.getElementById('incomeForm').reset();
+        document.getElementById('incomeDate').value = today;
+    }
+    else{
+        document.getElementById('expenseForm').reset();
+        document.getElementById('expenseDate').value = today;   
+    }
+}

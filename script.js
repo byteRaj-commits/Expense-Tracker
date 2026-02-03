@@ -54,3 +54,15 @@ function closeModal(modalId){
         document.getElementById('expenseDate').value = today;   
     }
 }
+
+window.onclick = function(event){
+    const incomeModal = document.getElementById('incomeModal');
+    const expenseModal = document.getElementById('expenseModal');
+
+    if(event.target === incomeModal){
+        closeModal('incomeModal')
+    }
+    if(event.target === 'expenseModal'){
+        closeModal('expenseModal')
+    }
+}
